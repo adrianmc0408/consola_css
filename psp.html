@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="psp.css" >
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <div id="principal">
+        <div id="texto">Consola CSS</div>
+        <div id="centro">
+            <div id="pantalla"></div>
+        </div>
+        <div id="izquierda">
+            <div id="select"></div>
+            <div id="gatillo1"></div>
+            <div id="joystick">
+                <div id="joystick2"></div>
+            </div>
+        </div>
+        <div id="derecha">
+            <div id="on" onclick="encender()">
+            </div>
+            <div id="start"></div>
+            <div id="gatillo2"></div>
+            <div id="botones">
+                <div id="a"></div>
+                <div id="b"></div>
+                <div id="x"></div>
+                <div id="y"></div>
+            </div>
+        </div>
+            
+    </div>
+
+    <script>
+        function encender(){
+            
+            var elemento=document.getElementById('pantalla');
+            var imagen=document.createElement("img");
+            var elemento2=document.getElementById('imagen');
+            if(!elemento2){
+            elemento.appendChild(imagen)
+            imagen.src='./carga.jpeg'
+            imagen.id="imagen"
+            setTimeout(function(){imagen.src="./pspfondo.jpeg"},3000)
+            }
+            else{
+                elemento.removeChild(elemento2);
+                elemento.style.backgroundColor="black"
+            }
+
+        }
+    </script>
+</body>
+</html>
